@@ -1,0 +1,28 @@
+#contact
+{   
+      background-color: white;
+      width: 800px;
+      margin: auto; 
+      margin-top: -9%;
+}
+
+.speech-bubble {
+	position: relative;
+	background: #00aabb;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 39px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	border-bottom: 0;
+	margin-top: -19.5px;
+	margin-left: -39px;
+}
