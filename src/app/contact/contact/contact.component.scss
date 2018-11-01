@@ -3,16 +3,22 @@
       background-color: white;
       width: 800px;
       margin: auto; 
-      margin-top: -9%;
+	margin-top: -9%;
 }
 
-.speech-bubble {
+#contact-bubble {
 	position: relative;
-	background: #00aabb;
-	border-radius: .4em;
+      background-color: #00558e;
+	color:white;
+	padding: 1px 1px 1px 1px;
+	margin-right: 280px;
+	text-align: center;
+	font-family: calibri;
+	font-size: 28px;
+	width: 300px;	
 }
 
-.speech-bubble:after {
+#contact-bubble:after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -20,9 +26,25 @@
 	width: 0;
 	height: 0;
 	border: 39px solid transparent;
-	border-right-color: #00aabb;
+	border-right-color: #00558e;
 	border-left: 0;
 	border-bottom: 0;
 	margin-top: -19.5px;
 	margin-left: -39px;
+}
+
+p
+{
+	margin-top: 11px;
+    	margin-bottom: 11px;
+}
+
+.contact-logo
+{
+	width: 50px;
+}
+
+#contact-information
+{
+	margin-top: 10px;
 }

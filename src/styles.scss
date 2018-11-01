@@ -1,4 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+
+@mixin shadow-box(){ 
+	-moz-box-shadow: 2px 2px 5px 0px #656565;
+	-webkit-box-shadow: 2px 2px 5px 0px #656565;
+	-o-box-shadow: 2px 2px 5px 0px #656565;
+	box-shadow: 2px 2px 5px 0px #656565;
+	filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=134, Strength=5);
+}
+
 body
 {
       margin: 0;
@@ -8,4 +17,19 @@ body
 #contact .p-col
 {
       padding: 0px 0px 0px 0px;
+}
+
+#toolbar
+{
+      @include shadow-box();
+}
+
+#contact
+{
+      @include shadow-box();
+}
+
+#contact-bubble
+{
+      @include shadow-box();
 }
