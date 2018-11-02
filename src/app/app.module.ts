@@ -5,8 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ToolbarModule } from './toolbar/toolbar.module';
 import { ContactModule } from './contact/contact.module';
-import { EducationModule } from './education/education.module';
+import { TimelineModule } from './timeline/timeline.module';
 import { SkillsModule } from './skills/skills.module';
+import { OtherActivitiesModule } from './other-activities/other-activities.module';
 
 @NgModule({
   declarations: [
@@ -17,8 +18,9 @@ import { SkillsModule } from './skills/skills.module';
     AppRoutingModule,
     ToolbarModule,
     ContactModule,
-    EducationModule,
-    SkillsModule
+    TimelineModule,
+    SkillsModule,
+    OtherActivitiesModule
   ],
   providers: [],
   bootstrap: [AppComponent]
