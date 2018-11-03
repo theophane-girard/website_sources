@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
+import { timelineData } from "../timeline.mock";
 
 @Component({
-  selector: 'app-timeline',
-  templateUrl: './timeline.component.html',
-  styleUrls: ['./timeline.component.scss']
+	selector: 'app-timeline',
+	templateUrl: './timeline.component.html',
+	styleUrls: ['./timeline.component.scss']
 })
 export class TimelineComponent implements OnInit {
 
-  constructor() { }
+	timelineData: any[]
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() 
+	{
+		this.timelineData = timelineData
+	}
 
 }

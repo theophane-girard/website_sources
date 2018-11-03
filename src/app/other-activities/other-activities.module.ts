@@ -6,6 +6,10 @@ import { OtherActivitiesComponent } from './other-activities/other-activities.co
   imports: [
     CommonModule
   ],
-  declarations: [OtherActivitiesComponent]
+  declarations: [OtherActivitiesComponent],
+  exports:
+  [
+    OtherActivitiesComponent
+  ]
 })
 export class OtherActivitiesModule { }

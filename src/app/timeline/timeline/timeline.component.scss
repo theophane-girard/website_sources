@@ -181,9 +181,12 @@ blockquote {
 	right: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) 
+{
 
-	.timeline {
+	#timeline {
+		
+		width: 700px;
 
 		&::before {
 			left: 50px;
