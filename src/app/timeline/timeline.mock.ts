@@ -9,14 +9,16 @@ export const timelineData =
 			[
 				{
 					name:	"LR Technologies",
-					logo: "lr.png"
+					logo: "lr.png",
+					url:	"https://lrtechnologies.fr"
 				},
 				{
 					name: "NSI - ADMR",
-					logo: "admr.png"
+					logo: "admr.png",
+					url: 	"admr.org",
 				}
 			],
-			description: "Développeur fullstack chez le client final, NSI, l'éditeur logiciel de l'association ADMR",
+			description: "Développeur fullstack prestataire chez NSI, l'éditeur logiciel de l'association ADMR",
 			skills: 
 			[
 				{
@@ -44,7 +46,8 @@ export const timelineData =
 			[
 				{
 					name:	"CGI",
-					logo: "cgi.png"
+					logo: "cgi.png",
+					url: 	"https://www.cgi.fr",
 				},
 			],
 			description: "Au sein de CGI, j'ai eu le rôle d'Agent support et d'Analyste Développeur. Mes missions consistaient à faire évoluer des applications Php et AngularJS ainsi que d'assurer le support de ces outils.",
@@ -74,15 +77,16 @@ export const timelineData =
 		},
 		education: 
 		{
-			title: "Etudiant en Alternance - Master de Chef de Projets Informatiques",
+			title: "Master CPIL",
 			companies: 
 			[
 				{
 					name:	"IPI - groupe IGS",
-					logo: "ipi.png"
+					logo: "ipi.png",
+					url: 	"http://www.ipi-ecoles.com/",
 				},
 			],
-			description: "Cette formation m'a permis de développer des compétences en développement back-end et front-end. Mais aussi en gestion de projets.",
+			description: "J'ai réalisé un Master en alternance à l'Institut Poly-Informatique afin d'obtenir un diplôme de Chef de Projets en Ingénierie Logicielle. Cette formation m'a permis de développer des compétences en développement back-end et front-end. Mais aussi en gestion de projets.",
 			skills: 
 			[
 				{
@@ -109,7 +113,8 @@ export const timelineData =
 			[
 				{
 					name:	"Rectorat de l'académie Toulouse",
-					logo: "rect.png"
+					logo: "rect.png",
+					url: 	"https://www.ac-toulouse.fr",
 				},
 			],
 			description: "Au sein du Rectorat, ma mission a été de développer de nouvelles fonctionnalités à l'application Web stockant toutes les informations RH du Rectorat.",
@@ -131,15 +136,16 @@ export const timelineData =
 		},
 		education: 
 		{
-			title: "Etudiant en Alternance - Licence APSYO (Analyste Programmeur en SYstèmes Ouverts)",
+			title: "Licence APSYO",
 			companies: 
 			[
 				{
 					name:	"IUT Blagnac",
-					logo: "iutb.png"
+					logo: "iut.png",
+					url: 	"https://www.iut-blagnac.fr",
 				},
 			],
-			description: "Cette formation m'a permis de développer des compétences en développement back-end et front-end.",
+			description: "Mon année au sein du Rectorat s'est effectuée en alternance avec la formation d'Analyste Programmeur en SYstèmes Ouverts. Elle m'a permis de développer des compétences en développement back-end et front-end.",
 			skills: 
 			[
 				{

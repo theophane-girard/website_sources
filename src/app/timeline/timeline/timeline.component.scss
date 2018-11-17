@@ -1,15 +1,4 @@
 $color-blue: #00558e;
-
-#timeline
-{   
-      // background-color: white;
-      width: 1200px;
-	margin: auto; 
-	font-family: calibri;
-	font-size: 17px;
-	font-weight: 400;	
-}
-
 $primary: #3F51B5;
 $dark-primary: #303F9F;
 $light-primary: $color-blue;
@@ -18,26 +7,30 @@ $primary-text: #212121;
 $secondary-text: #757575;
 $accent: $color-blue;
 
-section {
-//   padding: 100px 10px;
+#timeline
+{
+      width: 1200px;
+	margin: auto; 
+	font-family: calibri;
+	font-size: 17px;
+	font-weight: 400;	
 }
 
-html, body {
-  overflow-x: hidden;
-}
-
-h1 {
+h1 
+{
   font-size: 200%;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 400;
 }
 
-#timeline {
+#timeline 
+{
 
 	position: relative;
 
-	&::before {
+	&::before 
+	{
 		content: '';
 		background: $light-primary;
 		width: 5px;
@@ -48,22 +41,53 @@ h1 {
 	}
 }
 
-.timeline-item {
+.timelineDate
+{
+	width: 100%;
+	text-align: right;
+}
+
+.timelineDate p
+{
+	background-color: $accent;
+	display: inline-block;
+	padding: 10px;
+	margin-top: -8px;
+	margin-right: -28px;
+	color: white;
+}
+
+.timeline-item 
+{
 	width: 100%;
 	margin-bottom: 70px;
 
-	&:nth-child(even) {
+	&:nth-child(even) 
+	{
 
-		.timeline-content {
+		.timeline-content 
+		{
 			float: right;
-			padding: 40px 30px 10px 30px;
 
-			.date {
-				right: auto;
-				left: 0;
+			.timelineDate
+			{
+				width: 100%;
+				text-align: left;
 			}
 
-			&::after {
+			.timelineDate p
+			{
+				background-color: $accent;
+				display: inline-block;
+				padding: 10px;
+				margin-top: -8px;
+				margin-left: -28px;
+				color: white;
+			}
+
+
+			&::after 
+			{
 				content: '';
 				position: absolute;
 				border-style: solid;
@@ -77,23 +101,27 @@ h1 {
 		}
 	}
 
-	&::after {
+	&::after 
+	{
 		content: '';
 		display: block;
 		clear: both;
 	}
 }
 
-
-.timeline-content {
+.timeline-content 
+{
 	position: relative;
 	width: 45%;
 	padding: 10px 30px;
 	border-radius: 4px;
 	background: #f5f5f5;
-	// box-shadow: 0 20px 25px -15px rgba(0, 0, 0, .3);
+	background-repeat: no-repeat;
+	background-position: 325px 49px;
+	background-size: 78px;
 
-	&::after {
+	&::after 
+	{
 		content: '';
 		position: absolute;
 		border-style: solid;
@@ -106,7 +134,8 @@ h1 {
 	}
 }
 
-.timeline-img {
+.timeline-img 
+{
 	width: 30px;
 	height: 30px;
 	background: $primary;
@@ -118,45 +147,30 @@ h1 {
 	margin-left: -15px;
 }
 
-a {
-	background: $primary;
-	color: $text;
-	padding: 8px 20px;
-	text-transform: uppercase;
-	font-size: 14px;
-	margin-bottom: 20px;
-	margin-top: 10px;
-	display: inline-block;
-	border-radius: 2px;
-	box-shadow: 0 1px 3px -1px rgba(0, 0, 0, .6);
-
-	&:hover, &:active, &:focus {
-		background: darken($primary, 10%);
-		color: $text;
-		text-decoration: none;
-	}
-
-}
-
-.timeline-card {
+.timeline-card 
+{
 	padding: 0!important;
 
-	p {
+	p 
+	{
 		padding: 0 20px;
 	}
 
-	a {
+	a 
+	{
 		margin-left: 20px;
 	}
 }
 
-.timeline-img-header {
+.timeline-img-header 
+{
 
 	height: 200px;
 	position: relative;
 	margin-bottom: 20px;
 
-	h2 {
+	h2 
+	{
 		color: $text;
 		position: absolute;
 		bottom: 5px;
@@ -164,59 +178,60 @@ a {
 	}
 }
 
-blockquote {
+blockquote 
+{
 	margin-top: 30px;
 	color: $secondary-text;
 	border-left-color: $primary;
 	padding: 0 20px;
 }
 
-.date {
-	background: $accent;
-	display: inline-block;
-	color: $text;
-	padding: 10px;
-	position: absolute;
-	top: 0;
-	right: 0;
-}
-
 @media screen and (max-width: 1200px) 
 {
 
-	#timeline {
+	#timeline 
+	{
 		
 		width: 700px;
 
-		&::before {
+		&::before 
+		{
 			left: 50px;
 		}
 
-		.timeline-img {
+		.timeline-img 
+		{
 			left: 50px;
 		}
 
-		.timeline-content {
+		.timeline-content 
+		{
 			max-width: 100%;
 			width: auto;
 			margin-left: 70px;
 		}
 
-		.timeline-item {
+		.timeline-item 
+		{
 
-			&:nth-child(even) {
+			&:nth-child(even) 
+			{
 
-				.timeline-content {
+				.timeline-content 
+				{
 					float: none;
 
 				}
 			}
 
-			&:nth-child(odd) {
+			&:nth-child(odd) 
+			{
 
-				.timeline-content {
+				.timeline-content 
+				{
 					
-					&::after {
+					&::after 
+					{
 						content: '';
 						position: absolute;
 						border-style: solid;
@@ -232,4 +247,9 @@ blockquote {
 			}
 		}
 	}
+}
+
+.timeline_companies_logo
+{
+	width: 100px;
 }

@@ -4,16 +4,34 @@
             <div *ngFor="let event of timelineData" class="timeline-item">
                 <div class="timeline-img"></div>
 
-                <div class="timeline-content js--fadeInLeft">
-                    <h2>{{ event.pro.title }}</h2>
-                    <div class="date">{{ event.date }}</div>
-                    <h3>{{ event.pro.companies[0].name }}</h3>
-                    <p>                    
+                
+                <div class="timeline-content js--fadeInLeft p-grid p-justify-between">
+                    <div class="timelineDate col-12">
+                        <p>
+                            {{ event.date }}
+                        </p>
+                    </div>
+                    <div class="col-8 p-col-align-center">
+                        <h2 class="">{{ event.pro.title }}</h2>
+                        <h3>{{ event.pro.companies[0].name }}</h3>
+                    </div>
+                    <div class="col-4 p-col-align-center">
+                        <a href="{{event.pro.companies[0].url}}" target="_blank">
+                            <img src="{{ pictures_path + event.pro.companies[0].logo}}" alt="{{event.pro.companies[0].name}}" class="timeline_companies_logo">
+                        </a>
+                    </div>
+                    <p class="col-12">                    
                         {{ event.pro.description }}
                     </p>
-
-                    <h2 *ngIf="event.education">{{ event.education.title }}</h2>                    
-                    <!-- <h3>{{ event.pro.companies[0].name }}</h3> -->
+                    <div *ngIf="event.education" class="col-6 p-col-align-center">
+                        <h2>{{ event.education.title }}</h2>                    
+                        <h3>{{ event.education.companies[0].name }}</h3>
+                    </div>
+                    <div *ngIf="event.education" class="col-4 p-col-align-center">
+                        <a href="{{event.education.companies[0].url}}" target="_blank">
+                            <img src="{{ pictures_path + event.education.companies[0].logo}}" alt="{{event.education.companies[0].name}}" class="timeline_companies_logo">
+                        </a>
+                    </div>
                     <p *ngIf="event.education">
                         {{ event.education.description }}
                     </p>
