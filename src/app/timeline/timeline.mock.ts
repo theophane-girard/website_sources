@@ -73,6 +73,10 @@ export const timelineData =
 					name: "PostgreSQL",
 					logo: "pgsql.png"
 				},
+				{
+					name: "Talend",
+					logo: "talend.png"
+				},
 			]
 		},
 		education: 
@@ -101,6 +105,10 @@ export const timelineData =
 					name: "C#",
 					logo: "csharp.png"
 				},
+				{
+					name: "Angular",
+					logo: "ng.png"
+				},
 			]
 		},
 	},
@@ -126,7 +134,7 @@ export const timelineData =
 				},
 				{
 					name: "Symfony",
-					logo: "symf.png"
+					logo: "symfony.png"
 				},
 				{
 					name: "MySQL",

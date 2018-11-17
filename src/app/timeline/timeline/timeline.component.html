@@ -23,6 +23,11 @@
                     <p class="col-12">                    
                         {{ event.pro.description }}
                     </p>
+                    <div class="col-12 timelineIconList p-grid p-justify-between">
+                        <div class="p-col-align-center">
+                            <img *ngFor="let skill of event.pro.skills" class="col-1 timelineSkillLogo" src="{{pictures_path + skill.logo}}" alt="">
+                        </div>
+                    </div>
                     <div *ngIf="event.education" class="col-6 p-col-align-center">
                         <h2>{{ event.education.title }}</h2>                    
                         <h3>{{ event.education.companies[0].name }}</h3>
@@ -35,6 +40,11 @@
                     <p *ngIf="event.education">
                         {{ event.education.description }}
                     </p>
+                    <div *ngIf="event.education" class="col-12 timelineIconList p-grid p-justify-between">
+                        <div class="p-col-align-center">
+                            <img *ngFor="let skill of event.education.skills" class="col-1 timelineSkillLogo" src="{{pictures_path + skill.logo}}" alt="">
+                        </div>
+                    </div>
                     
                 </div>
             </div>
