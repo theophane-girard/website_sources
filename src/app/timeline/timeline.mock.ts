@@ -18,7 +18,7 @@ export const timelineData =
 					url: 	"admr.org",
 				}
 			],
-			description: "Développeur fullstack prestataire chez NSI, l'éditeur logiciel de l'association ADMR",
+			description: "Développeur fullstack prestataire chez NSI, l'éditeur logiciel de l'ADMR",
 			skills: 
 			[
 				{
