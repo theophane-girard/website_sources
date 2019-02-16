@@ -8,8 +8,7 @@ import { skillLogos } from "../skills.mock";
 	styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent implements OnInit {
-
-	
+    	
 	@ViewChild('skills') canvas : ElementRef
 	public context: CanvasRenderingContext2D
 	public chart: any
@@ -17,7 +16,7 @@ export class SkillsComponent implements OnInit {
 	public loading: boolean;
 
 	constructor() 
-	{	
+	{	                      
 		this.dataSet = 
 		[
 			{
@@ -37,73 +36,81 @@ export class SkillsComponent implements OnInit {
 			},
 		]
 
-		skillLogos.forEach((logo,index,skills) => 
-		{				
-			let tmpImage = new Image()
-			tmpImage.src = logo.src
-			
-			let ratio = this.calculateAspectRatioFit(tmpImage.width,tmpImage.height,100,80)
-			tmpImage.height = ratio.height
-			tmpImage.width = ratio.width
-
-			let point = 
-			{
-				data:
-				[
-					{
-						x: logo.x,
-						y: logo.y,
-						r: 5
-					},					
-				],
-				pointStyle: tmpImage
-			}
-
-			this.dataSet.push(point)
-		});
+        this.doInitDataSet()
 	}
 
 	ngOnInit() 
 	{
-		this.loading = true
-		this.context = (<HTMLCanvasElement>this.canvas.nativeElement).getContext('2d');
-		
-		this.chart = new Chart(this.context,
-		{
-			type: 'bubble',
-			data:
-			{
-				datasets: this.dataSet					
-			},				
-			options:
-			{
-				legend:
-				{
-					display: false
-				},
-				scales:
-				{
-					xAxes:
-					[
-						{
-							display: false
-						}
-					],
-					yAxes: 
-					[
-						{
-							display: false
-						}
-					],
-				}
-			}
-		});
+        this.context = (<HTMLCanvasElement>this.canvas.nativeElement).getContext('2d');
 
-		let interval = setTimeout(() => 
-		{
-			this.loading = false
-		}, 1500);
-	}
+        this.chart = new Chart(this.context,
+        {
+            type: 'bubble',
+            data:
+            {
+                datasets: this.dataSet
+            },				
+            options:
+            {
+                legend:
+                {
+                    display: false
+                },
+                scales:
+                {
+                    xAxes:
+                    [
+                        {
+                            display: false
+                        }
+                    ],
+                    yAxes: 
+                    [
+                        {
+                            display: false
+                        }
+                    ],
+                }
+            }
+        }); 
+    }
+
+    /**
+     * Init all logo to a point 
+     */
+    doInitDataSet() 
+    {
+        skillLogos.forEach((logo,index,skills) => 
+		{				
+			let tmpImage = new Image()
+			let resultImage = new Image()
+            tmpImage.src = logo.src
+
+            resultImage.onload = () =>
+            {
+                let ratio = this.calculateAspectRatioFit(tmpImage.width,tmpImage.height,100,80)
+                resultImage.height = ratio.height
+                resultImage.width = ratio.width
+            }
+
+            resultImage.src = logo.src
+
+            let point = 
+            {
+                data:
+                [
+                    {
+                        x: logo.x,
+                        y: logo.y,
+                        r: 5
+                    },					
+                ],
+                pointStyle: resultImage
+            }
+
+            this.dataSet.push(point)
+		});
+    }
 
 	 /**
 	 * Conserve aspect ratio of the original region. Useful when shrinking/enlarging
